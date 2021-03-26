@@ -9,7 +9,7 @@ namespace RockPaperScissor.CMD
         private static readonly string scissor = "Schere";
         private static readonly string stone = "Stein";
 
-        private static string[] thing =  { paper, stone, scissor};
+        private static string[] choices =  { paper, stone, scissor};
 
         static void Main(string[] args)
         {
@@ -28,7 +28,7 @@ namespace RockPaperScissor.CMD
             int randomIndex = random.Next(0, 2);
             //Console.WriteLine(randomIndex);
 
-            var computerSelection = thing[randomIndex];
+            var computerSelection = choices[randomIndex];
 
             Console.WriteLine("Computer: '" + computerSelection + "' User: '" + userSelection + "'");
             if (computerSelection == userSelection)
@@ -64,6 +64,7 @@ namespace RockPaperScissor.CMD
                 Console.WriteLine("Computer sagt 'Nein'!");
             }
 
+            Console.ReadLine();
         }
     }
 }
